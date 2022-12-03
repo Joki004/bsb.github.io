@@ -14,29 +14,73 @@
    <div class="header">
        <div class="top_header">
         <div class="left">
-            <img class="logo" src="./img/introduction.png" alt="">
-            <p>BSB</p>
+            <i class="imgp fa-solid fa-handshake fa-2xl"></i>
+            <p class="bsb">BSB</p>
         </div>
         <div class="research_bar">
+            <i class='bx bx-search ' ></i>
             <input id= "search"type="text" name="search" placeholder="Que cherchez-vous?">
         </div>
         <div class="menu">
             <ul>
-                <li>About</li>
+                <li>About </li>
                 <li>Help</li>
-                <li><i class='bx bxs-cart-alt'></i></li>
+                <li><i class='bx bxs-cart-alt bx-sm cart bx-tada-hover'></i></li>
                 <li><img class="img" src="./img/user.png" alt=""></li>
             </ul>
         </div>
 
     </div>
+    
+    <!--Devise--------------------->
     <div class="middle_header">
-        <p>Brother, Same Business <span>Qualite au rendez-vous</span></p>
-      
-    <div class="mid_header">
-            <img class= "imgt" src="./img/img4.png" alt="">
+        <p class="slide_t">Brother, Same Business <span><i style="color:blue" class='bx bxs-badge-check'></i>Qualite au rendez-vous</span></p>
     </div>
-   </div>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="./img/apple_and_windows_touch_screen_devices-wallpaper-1920x540.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="/img/apple_logo_10-wallpaper-1920x600.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="./img/naruto_34-wallpaper-1920x540.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="./img/ninja-2.jpg" style="width:100%">
+      </div>
+    <div class="mySlides fade">
+        <img src="./img/frozen_elsa.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./img/fortnite_game_iris_skin_outfit-wallpaper-1920x540.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./img/netflix.jpg" style="width:100%">
+      </div>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+ 
    <div class="body">
         <div class="category">
             <ul>
@@ -200,7 +244,7 @@
         <img class="logo" src="./img/introduction.png" alt="">
         <p>BSB</p>
         </div>
-        <div class="text">
+        <div class="text_t">
             <p>Sur Recharge.fr, achetez une carte prépayée en ligne rapidement et facilement. Rechargez votre crédit d’appel mobile parmi les plus grands opérateurs téléphoniques en France ou offrez-vous une carte bancaire prépayée pour faciliter vos achats en ligne. Il est également possible d'acheter vos jeux vidéo préférés grâce à une carte prépayée jeux vidéo ou de télécharger vos applications favorites avec une carte cadeau Musique, TV & Apps. Le paiement sur Recharge.fr s'effectue avec un compte Paypal ou par carte bancaire. Votre code de recharge s'affiche ensuite directement sur votre écran et vous est également envoyé par e-mail. Facilitez et sécurisez vos achats en ligne grâce à Recharge.fr.</p>
         </div>
    </div>
@@ -249,5 +293,26 @@
    </div>
   
 </div>
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 3 seconds
+    }
+    </script>
 </body>
 </html>
