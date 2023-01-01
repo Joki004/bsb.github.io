@@ -300,16 +300,68 @@
                 </div>
         </div>
    </div>
+   <h2>Commande</h2>
+   <form method="post" name="oder_client" action="./pages/oder.php">
+    <div class="order">
+        <div class="nom">
+            <label for="nom"></label>
+            <input type="text" name="nom" class="nom_t" placeholder="Nom">
+            <label for="prenom"></label>
+            <input type="text" name="prenom" placeholder="Prenom"  class="nom_t" >
+        </div>
+        <div class="coordonee">
+            <label for="email"></label>
+            <input type="text" class="nom_t" name="e-mail" placeholder="E-mail adresse">
+            <label for="num"></label>
+            <input type="text" class="nom_t" name="num" placeholder="Numero">
+        </div>
+        <div class="order_t">
+            <label for="produit">Choisis le procuit: </label>
+            <select name="produit" id="produit_t">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
 
+           <div class="price">
+            <label for="prix">Choose a car:</label>
+            <select name="prix" id="prix">
+                <option value="volvo">10$</option>
+                <option value="saab">20$</option>
+                <option value="mercedes">30$</option>
+                <option value="audi">40$</option>
+            </select>
+           </div>
+
+           <div class="quantite">
+          
+                <label for="quantite">
+                    Quantite :
+                    <input type="number" name="quantite" id="quantite"
+                        min="1" max="1000" step="1" value="0">
+                    
+                </label>
+
+           </div>
+
+           <input class= "details"type="text" name="details" placeholder="Details sur la commande">
+            <input type="submit" value="Commander">
+          
+    </div>
+   </form>
+ 
+    
    <div class="more_product">
                 
-    <span>About us </span>
+    <span>About us</span>
   
    </div>
   <div class="f" id="footer_id">
     <div class="foot">
 
-        <span>Metod de paiment : </span>
+        <span>Metode de paiment : </span>
         <img id="footerPaymentMethods" src="https://static.rapido.com/media/topup/recharge/default/images/layout/modes-de-paiement.jpg?v=1669890059
     " alt="Modes de paiement" title="Modes de paiement sur Recharge.fr">
        </div>
@@ -341,6 +393,7 @@
                 <input class= "search_n" type="text" name="search" placeholder="Prenom">
             </div>
             <input class= "search_e"type="text" name="search" placeholder="Adresse e-mail">
+            <input class= "search_e"type="number" name="search" placeholder="numero de telephone">
             <input class= "search"type="text" name="search" placeholder="tapez votre message">
             <button class="send">Envoyer</button>
         </div>
