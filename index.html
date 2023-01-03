@@ -11,37 +11,45 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <!---------------------------------HEADER-------------------------------------->
    <div class="header">
+     <!---------------------------------TOP-HEADER---------------------------------->
        <div class="top_header">
+
         <div class="left">
             <i class="imgp fa-solid fa-handshake fa-2xl"></i>
             <p class="bsb">BSB</p>
         </div>
+
         <div class="research_bar">
             <i class='bx bx-search ' ></i>
-            <input id= "search"type="text" name="search" placeholder="Que cherchez-vous?">
+            <input id= "search" type="text" name="search" placeholder="Que cherchez-vous?">
         </div>
+
         <div class="menu">
             <ul>
-                <li> <a href="#footer_id">About</a>  </li>
-                <li>Help</li>
-                <li><i class='bx bxs-cart-alt bx-sm cart bx-tada-hover'></i></li>
+                <li> <a href="#footer_id">About</a></li>
+                <li><a href="mailto:lubumbashicorporation25@gmail.com">help</a></li>
+               <!-- <li><i class='bx bxs-cart-alt bx-sm cart bx-tada-hover'></i></li>-->
                 <li><img class="img" src="./img/user.png" alt=""></li>
             </ul>
         </div>
 
     </div>
     
-    <!--Devise--------------------->
-    <div class="middle_header">
-        <p class="slide_t">Brother, Same Business 
-            <span><i style="color:blue" class='bx bxs-badge-check'></i>Qualite au rendez-vous</span>
-            <span><i style="color:blue" class='bx bxs-badge-check'></i>Rechargement rapide</span>
-            <span><i style="color:blue" class='bx bxs-badge-check'></i>Paiment securise</span>
-        </p>
+    <!--------------------------------------------MIDDLE-HEADER---------------------------------->
+    <div id="scroll-container">
+        <div id="scroll-text">
+            <span style="margin-right:80px ;"><i style="color:blue" class='bx bxs-badge-check'></i>Brother, Same Business </span>
+            <span style="margin-right:80px ;"><i style="color:blue" class='bx bxs-badge-check'></i>Qualite au rendez-vous</span>
+            <span style="margin-right:80px ;"><i style="color:blue" class='bx bxs-badge-check'></i>Rechargement rapide</span>
+            <span style="margin-right:80px ;"><i style="color:blue" class='bx bxs-badge-check'></i>Paiment securise</span>
+        </div>
     </div>
 
-    <!-- Slideshow container -->
+ 
+
+    <!-------------------------------- Slideshow container-------------------------------- -->
 <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
@@ -84,21 +92,27 @@
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
+
   </div>
- 
+  <!---------------------------------CATEGORIES-------------------------------------->
+  <div class="category">
+
+    <ul>
+        <li class="tab1">AFFINER PAR CATÉGORIE</li>
+        <li class="tab"><i class='bx bx-music'></i> cartes cadeaux musique</li>
+        <li class="tab"><i class='bx bx-devices'></i> cartes cadeaux Apps</li>
+        <li class="tab"> <i class='bx bx-joystick'></i> cartes prepayees jeux videos</li>
+    </ul>
+</div>
+
    <div class="body">
-        <div class="category">
-            <ul>
-                <li><i class='bx bx-music'></i> carte cadeau musique</li>
-                <li><i class='bx bx-devices'></i> carte cadeau Apps</li>
-                <li> <img class="img" src="./img/console.png" alt=""> carte prepayee jeux video</li>
-            </ul>
-        </div>
+  
         <div class="grid">
-          
+             <!--LEFT-->
                 <div class="left">
                     <p>Produit Populaires</p>
                     <div class="box">
+
                         <div class="stars">
                                 <img class="img" src="./img/netflixpop.jpg" alt="">
                         </div>
@@ -117,8 +131,11 @@
                         <div class="stars">
                             <img class="img" src="./img/psn.jpeg" alt="">
                         </div>
+
                     </div>
-                    <p>carte cadeau musique (Gift Card)</p>
+
+                    <p>carte cadeau musique</p>
+
                     <div class="product">
                         <div class="card">
                             <div class="img_card"><img class="card_img" src="./img/AppleLogoNoShadow.png" alt=""></div>
@@ -144,7 +161,7 @@
                     </div>
                     <div class="more_product">
                         
-                        <span>Plus de produits</span>
+                        <span><a href="#footer_id">Plus de produits</a></span>
                       
                     </div>
                     <p>carte cadeau apps</p>
@@ -177,13 +194,15 @@
                     </div>
                     <div class="more_product">
                         
-                        <span>Plus de produits</span>
+                        <span><a href="#footer_id">Plus de produits</a></span>
                       
                     </div>
                    
                 </div>
-                <!--Right-->
+
+                <!--RIGHT-->
                 <div class="right">
+                    <p>suggestion</p>
                <div class="suggestion">
                 <div class="suggestion_l">
                     <div class="card_s">
@@ -191,10 +210,11 @@
                         <div class="name_card">Fortnite Vbuck</div>
                     </div>
                 </div>
+
                 <div class="suggestion_r">
                     <p>Fortnite Vbuck</p>
-                    <p>prix :25$ </p>
-                    <button>Commander</button>
+                    <p>prix : 13$ </p>
+                    
                 </div>
                </div>
                <p>carte cadeau Streams</p>
@@ -227,7 +247,7 @@
             </div>
 
             <div class="more_product">
-                <span>Plus de produits</span>
+                <span><a href="#footer_id">Plus de produits</a></span>
             </div>
             <p>carte cadeau Jeux videos</p>
 
@@ -295,14 +315,14 @@
             </div>
 
             <div class="more_product">
-                <span>Plus de produits</span>
-                <span>Plus de produits</span>
+                <span><a href="#footer_id">Plus de produits</a></span>
             </div>
                 </div>
         </div>
    </div>
+<!------------------------------------COMMANDE-------------------->
    <h2 class="title_o">Commande</h2>
-   <form method="post" name="oder_client" action="https://formspree.io/f/mgebeovw">
+   <form method="post" name="oder_client" action="https://formspree.io/f/mgebeovw" class="co">
     <div class="order">
         <div class="nom">
             <label for="nom"></label>
@@ -348,7 +368,7 @@
            </div>
         
            <input class= "details"type="text" name="details"  placeholder="Details sur la commande">
-            <input type="submit" value="Commander">
+            <input type="submit" class="button-17" value="Commander" >
           
     </div>
    </form>
@@ -359,15 +379,25 @@
     <span>About us</span>
   
    </div>
+
+
+   <!--------------------------------------FOOTER----------------------------------------------- -->
   <div class="f" id="footer_id">
     <div class="foot">
 
         <span>Metode de paiment : </span>
-        <img id="footerPaymentMethods" src="https://static.rapido.com/media/topup/recharge/default/images/layout/modes-de-paiement.jpg?v=1669890059
-    " alt="Modes de paiement" title="Modes de paiement sur Recharge.fr">
+        <div class="methode_paiment">
+            <img src="./img/cash.webp" alt="airtel money">
+            <img src="./img/aitel.png" alt="airtel money">
+            <img src="./img/vodacom.png" alt="airtel money">
+            <img src="./img/orange.png" alt="airtel money">
+           
+        </div>
+       
        </div>
     
        <div class="info">
+
         <div class="information">
             <div class="left">
                 <i class="imgp fa-solid fa-handshake fa-2xl"></i>
@@ -396,7 +426,7 @@
             <input class= "search_e"type="text" name="search" placeholder="Adresse e-mail">
             <input class= "search_e"type="number" name="search" placeholder="numero de telephone">
             <input class= "search"type="text" name="search" placeholder="tapez votre message">
-            <button class="send">Envoyer</button>
+            <button class="button-17">Envoyer</button>
         </div>
        
        </div>
@@ -417,6 +447,7 @@
        </div>
     
   </div>
+
 <p style="padding: 1px;">©BSB</p>
    
   
