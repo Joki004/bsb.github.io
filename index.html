@@ -10,7 +10,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+<body onscroll="price()">
     <!---------------------------------HEADER-------------------------------------->
    <div class="header">
      <!---------------------------------TOP-HEADER---------------------------------->
@@ -22,8 +22,8 @@
         </div>
 
         <div class="research_bar">
-            <i class='bx bx-search ' ></i>
-            <input id= "search" type="text" name="search" placeholder="Que cherchez-vous?">
+            <i class='bx bx-search '></i>
+            <input onclick="alert_t()" id= "search" type="text" name="search" placeholder="Que cherchez-vous?">
         </div>
 
         <div class="menu">
@@ -31,8 +31,8 @@
                 <li> <a href="#footer_id">About</a></li>
                 <li><a href="./pages/prix.html" target="_blank">Prix</a></li>
                 <li><a href="mailto:lubumbashicorporation25@gmail.com">help</a></li>
-               <!-- <li><i class='bx bxs-cart-alt bx-sm cart bx-tada-hover'></i></li>-->
-                <li><img class="img" src="./img/user.png" alt=""></li>
+               <li><i  onclick="alert_t()" class='bx bxs-cart-alt bx-sm cart bx-tada-hover'></i></li>
+                <li><img  onclick="alert_t()" class="img" src="./img/user.png" alt=""></li>
             </ul>
         </div>
 
@@ -340,35 +340,74 @@
         <div class="order_t">
             <label for="produit">Choisis le procuit: </label>
             <select name="produit" id="produit_t">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+                <option value="Netflix">Netflix</option>
+                <option value="Apple store">Apple store</option>
+                <option value="Fortnite Vbuck">Fortnite Vbuck</option>
+                <option value="Google play">Google play</option>
+                <option value="Spotify">Spotify</option>
+                <option value="Amazon">Amazon</option>
+                <option value="Xbox">Xbox</option>
+                <option value="PSN">PSN</option>
+                <option value="Point FIFA">Point FIFA</option>
+                <option value="Nintendo Eshop">Nintendo Eshop</option>
+                <option value="Microsoft">Microsoft</option>
+                <option value="Twitch">Twitch</option>
+                <option value="Steam">Steam</option>
+                <option value="Apex legeng coins">Apex legeng coins</option>
+                <option value="League of Legend">League of Legend</option>
+            
+                <option value="PUBG Mobile UC">PUBG Mobile UC</option>
+
+
             </select>
         </div>
 
            <div class="price">
             <label for="prix">Choose a car:</label>
-            <select name="prix" id="prix">
-                <option value="volvo">10$</option>
-                <option value="saab">20$</option>
-                <option value="mercedes">30$</option>
-                <option value="audi">40$</option>
+            <select name="prix" id="prix" onchange="price()" >
+                <option value="10(">10 €</option>
+                <option value="15(">15 €</option>
+                <option value="20(">20 €</option>
+                <option value="25(">25 €</option>
+                <option value="30(">35 €</option>
+                <option value="50(">50 €</option>
+                <option value="100(">100 €</option>
+
+                <option value="10$">10 $</option>
+                <option value="15$">15 $</option>
+                <option value="20$">20 $</option>
+                <option value="25$">25 $</option>
+                <option value="30$">30 $</option>
+                <option value="50$">50 $</option>
+                <option value="100$">100 $</option>
+
+                <option value="100Z">100 ZAR</option>
+                <option value="200Z">200 ZAR</option>
+                <option value="300Z">300 ZAR</option>
+                <option value="400Z">400 ZAR</option>
+                <option value="500Z">500 ZAR</option>
+                <option value="1000Z">1000 ZAR</option>
             </select>
            </div>
-
+       
            <div class="quantite">
           
                 <label for="quantite">
                     Quantite :
-                    <input type="number" name="quantite" id="quantite"
-                        min="1" max="1000" step="1" value="0">
+                    <input type="number" name="quantite" id="quantite" 
+                        min="1" max="1000" step="1" value="0" onchange="price()">
                     
                 </label>
 
            </div>
-        
-           <input class= "details"type="text" name="details"  placeholder="Details sur la commande">
+           <div class="facture">
+            <h4>Prix Final : </h4>
+            <h5></h5>
+            <div class="button-17 pass" id="prix_f"></div>
+            <div class="button-17 pass" id="prix_fc"></div>
+           </div>
+         
+           <input class= "details"type="text" name="details"  placeholder="Details sur la commande (Comme le pays de provenance par example)">
             <input type="submit" class="button-17" value="Commander" >
           
     </div>
@@ -388,10 +427,10 @@
 
         <span>Metode de paiment : </span>
         <div class="methode_paiment">
-            <img src="./img/cash.webp" alt="airtel money">
+            <img src="./img/cash.webp" alt="cash money">
             <img src="./img/aitel.png" alt="airtel money">
-            <img src="./img/vodacom.png" alt="airtel money">
-            <img src="./img/orange.png" alt="airtel money">
+            <img src="./img/vodacom.png" alt="vodacom money">
+            <img src="./img/orange.png" alt="orange money">
            
         </div>
        
@@ -417,17 +456,21 @@
                         sécurisez vos achats en ligne grâce à BSB.</p>
                 </div>
         </div>
-    
+       
         <div class="contactez-nous">
             <h1>Contactez-Nous</h1>
-            <div class="id">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeb2S2mDxXeYwHWt3ls6T1ZTiHFcJwd7nC0GosZORNBAac_6Q/viewform?embedded=true" class="forms">Chargement…
+
+            </iframe>
+           
+          <!--  <div class="id">
                 <input class= "search_n" type="text" name="search" placeholder="Nom">
                 <input class= "search_n" type="text" name="search" placeholder="Prenom">
             </div>
             <input class= "search_e"type="text" name="search" placeholder="Adresse e-mail">
             <input class= "search_e"type="number" name="search" placeholder="numero de telephone">
             <input class= "search"type="text" name="search" placeholder="tapez votre message">
-            <button class="button-17">Envoyer</button>
+            <button class="button-17">Envoyer</button>-->
         </div>
        
        </div>
@@ -444,7 +487,20 @@
         <a href="tel:+48512851206"><i style="background: #0088cc; color:#fff" class='bx bxl-telegram bx-lg bx-border-circle' ></i></a>
         <a href="tel:+48512851206"><i style="color:#fff; border:solid" class='bx bxl-gmail bx-lg bx-border-circle' ></i></a>
     
-    
+            
+       </div>
+
+       <div class="avis">
+    <div class="avis_t button-17">
+        <a href="">
+            <i class='bx bx-star bx-tada-hover'></i>
+            <i class='bx bx-star bx-tada-hover'></i>
+            <i class='bx bx-star bx-tada-hover'></i>
+            <i class='bx bx-star bx-tada-hover'></i>
+            <i class='bx bx-star bx-tada-hover'></i>
+        </a>
+    </div>
+      
        </div>
     
   </div>
@@ -455,6 +511,69 @@
 
 
 <script>
+function alert_t() {
+  alert("Section non disponible pour le moment");
+}
+    function price(){
+        var choice = document.getElementById("prix");
+        var quantite = document.getElementById("quantite").value;
+        var nombre = quantite.match(/\d+/);
+        var prix = choice.value;
+        
+        const arr = [10,15,20,25,30,50,100];
+        const arr_rand = [100,200,300,400,500,1000];
+
+        const prix_euro = [13,19,24,30,36,60,118];
+        const prix_dollars = [12,15,23,29,34,56,111];
+        const prix_rand=[8,14,21,27,34,67];
+        var price, match, price_C, i;
+        var flag = 0;
+        if(prix[prix.length-1]==='(') {
+            
+            match = prix.match(/\d+/);
+            price_c = parseInt(match[0]) ;
+
+            for(i=0;i<arr.length;i++){
+
+                if(price_c === arr[i]){
+                    break;
+                }
+            }
+
+            price = prix_euro[i];
+            
+            
+        }
+
+        else if(prix[prix.length-1]==='$'){
+            match = prix.match(/\d+/);
+            price_c = parseInt(match[0]) ;
+
+            for(i=0;i<arr.length;i++){
+
+                if(price_c === arr[i]){
+                    break;
+                }
+            }
+
+            price = prix_dollars[i];
+        }
+        else if(prix[prix.length-1]==='Z'){
+            match = prix.match(/\d+/);
+            price_c = parseInt(match[0]) ;
+
+            for(i=0;i<arr_rand.length;i++){
+
+                if(price_c === arr_rand[i]){
+                    break;
+                }
+            }
+
+            price = prix_rand[i];
+        }
+        document.getElementById("prix_f").innerHTML =price*quantite + ' $';
+        document.getElementById("prix_fc").innerHTML =price*quantite*2000 + ' Fc';
+    }
     let slideIndex = 0;
     showSlides();
     

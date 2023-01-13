@@ -599,7 +599,11 @@ align-self: center;
   margin-left: 1.5%;
   height: 100%;
 }
-
+#prix.active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .quantite{
   display: flex;
   flex-direction: row;
@@ -746,13 +750,18 @@ align-self: center;
    background: #e0e0e0;
    display: flex;
    flex-direction: row;
+   flex-wrap: wrap;
    justify-content: space-between;
+   align-items: center;
    gap: 8px;
    padding-bottom: 10px;
    border-radius: 8px 8px 0 0;
    border: solid #c0bcbc;
    margin: 5px;
    padding: 5px;
+   width: 100%;
+   height: 100%;
+   
  }
  .fin{
    background-color: #595959;
@@ -777,9 +786,9 @@ justify-content: space-between;
 margin-left: 5%;
 align-items: center;
 gap: 10%;
-width: 60%;
+width: 70%;
 height: 100%;
-padding: 2%;
+
  }
 .id{
   width: 100%;
@@ -900,4 +909,76 @@ padding: 2%;
    }
    
    
+}
+
+.forms{
+  display: flex;
+  width: 100%;
+  height: 600px;
+  margin-bottom: 16px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 8px;
+ 
+
+}
+
+.avis{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+align-items: center;
+
+ 
+  width: 100%;
+  height: auto;
+  align-items: flex-end;
+}
+
+.avis_t{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+align-items: center;
+background-color: yellow;
+  border: solid;
+  width: 25%;
+  height: auto;
+  align-items: flex-end;
+}
+
+.bx-star{
+  color: #0066ff;
+  background-color: yellow;
+}
+
+.facture{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  align-self: flex-end;
+  border: solid;
+  border-radius: 8px;
+  width: 50%;
+  height: 100%;
+  gap: 5%;
+}
+
+.facture>h4{
+  background-color:#f0eaea;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.facture>h5{
+  border: solid;
+  width:99%;
+
+}
+
+.pass{
+  width: 50%;
+  margin:2%;
 }
