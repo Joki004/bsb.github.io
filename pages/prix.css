@@ -18,6 +18,20 @@ body{
    
     /*background-color: 	rgba(55, 122, 209, 0.925);*/
 }
+.nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: solid;
+    width: 100%;
+    height: 100%;
+    margin-top: 3px;
+}
+.nav>a{
+    text-decoration: none;
+    text-transform: none;
+     color: #595959;
+  }
 .header{
     border: solid;
     width: 100%;
@@ -83,6 +97,8 @@ body{
 width: 30%;
 height: 100%;
 font-size: 70%;
+border: solid;
+margin-top: 5%;
 
 }
 
@@ -90,10 +106,11 @@ font-size: 70%;
     display: flex;
     justify-content: flex-start;
     font-size: 100%;
-    margin: 0;
+
     width: 100%;
     height: 100%;
     padding: 5px;
+  
     background-color:	rgba(55, 122, 209, 0.925);
    }
 .filtre>ul{
@@ -108,6 +125,7 @@ font-size: 70%;
     gap: 5px;
     width: 95%;
     height: 100%;
+    margin: 1%;
    
 
 
