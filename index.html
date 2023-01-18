@@ -366,6 +366,7 @@
            <div class="price">
             <label for="prix">Choose a car:</label>
             <select name="prix" id="prix" onchange="price()" >
+                <option value=".">Faites votre choix</option>
                 <option value="10(">10 €</option>
                 <option value="15(">15 €</option>
                 <option value="20(">20 €</option>
@@ -574,6 +575,10 @@ function alert_t() {
             }
 
             price = prix_rand[i];
+        }
+        else if(prix[prix.length-1]==='.'){
+        
+            price = 0;
         }
         document.getElementById("prix_f").innerHTML =price*quantite + ' $';
         document.getElementById("prix_fc").innerHTML =price*quantite*2000 + ' Fc';
