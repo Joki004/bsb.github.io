@@ -540,7 +540,7 @@ function sortListNumber() {
         const numStr1 = parseInt(matches[0]) ;
         matches = name_2.match(/\d+/);
         const numStr2 = parseInt(matches[0]) ;
-        document.getElementById("demo").innerHTML = numStr1;
+     
        
         if (numStr1 > numStr2) {
             /* if next item is alphabetically lower than current item,
@@ -658,9 +658,9 @@ function w3RemoveClass(element, name) {
 
 // Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
+var btn = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btn.length; i++) {
+  btn[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
@@ -692,9 +692,9 @@ function w3RemoveClass(element, name) {
 
 // Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
+var btn = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btn.length; i++) {
+  btn[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";

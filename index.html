@@ -324,23 +324,23 @@
    </div>
 <!------------------------------------COMMANDE-------------------->
    <h2 class="title_o">Commande</h2>
-   <form method="post" name="oder_client" action="https://formspree.io/f/mgebeovw" class="co">
+   <form method="post" class="co"  id=”contact” onsubmit="return postToGoogle();">
     <div class="order">
         <div class="nom">
-            <label for="nom"></label>
-            <input type="text" name="nom" class="nom_t" placeholder="Nom">
-            <label for="prenom"></label>
-            <input type="text" name="prenom" placeholder="Prenom"  class="nom_t" >
+            <label for="entry.2005620554"></label>
+            <input type="text" name="entry.2005620554" class="nom_t" placeholder="Nom" id="UserLastName">
+            <label for="entry.1563551537"></label>
+            <input type="text" name="entry.1563551537" placeholder="Prenom"  class="nom_t" id="UserName" >
         </div>
         <div class="coordonee">
-            <label for="email"></label>
-            <input type="text" class="nom_t" name="e-mail" placeholder="E-mail adresse">
-            <label for="num"></label>
-            <input type="text" class="nom_t" name="num" placeholder="Numero">
+            <label for="entry.1045781291"></label>
+            <input type="text" class="nom_t" name="entry.1045781291" placeholder="E-mail adresse" id="UserEmailAddress">
+            <label for="entry.1065046570"></label>
+            <input type="text" class="nom_t" name="entry.1065046570" placeholder="Numero" id="UserPhoneNUmber">
         </div>
         <div class="order_t">
-            <label for="produit">Choisis le procuit: </label>
-            <select name="produit" id="produit_t">
+            <label for="entry.1166974658">Choisis le procuit: </label>
+            <select name="entry.1166974658" class="produit_t" id="UserProdutc">
                 <option value="Netflix">Netflix</option>
                 <option value="Apple store">Apple store</option>
                 <option value="Fortnite Vbuck">Fortnite Vbuck</option>
@@ -363,9 +363,9 @@
             </select>
         </div>
 
-           <div class="price">
-            <label for="prix">Choose a car:</label>
-            <select name="prix" id="prix" onchange="price()" >
+        <div class="price">
+            <label for="entry.1375059268">Choose a car:</label>
+            <select name="entry.1375059268" class="prix" onchange="price()" id="UserPrice" >
                 <option value=".">Faites votre choix</option>
                 <option value="10(">10 €</option>
                 <option value="15(">15 €</option>
@@ -390,31 +390,35 @@
                 <option value="500Z">500 ZAR</option>
                 <option value="1000Z">1000 ZAR</option>
             </select>
-           </div>
+        </div>
        
-           <div class="quantite">
+        <div class="quantite">
           
                 <label for="quantite">
                     Quantite :
-                    <input type="number" name="quantite" id="quantite" 
+                    <input type="number" name="entry.722397237" class="quantite_t" id="UserQuantity" 
                         min="1" max="1000" step="1" value="0" onchange="price()">
                     
                 </label>
 
-           </div>
-           <div class="facture" >
+        </div>
+        <div class="facture" >
             <h4>Prix total </h4>
             <h4>+ frais de service </h4>
             <h5></h5>
             <label for="prix_f"></label>
-            <div class="button-17 pass" id="prix_f" name="prix_f"></div>
+            <div class="button-17 pass" id="prix_f" name="entry.1680125036"></div>
             <label for="prix_fc"></label>
-            <div class="button-17 pass" id="prix_fc" name="prix_fc"></div>
-           </div>
-         
-           <input class= "details"type="text" name="details"  placeholder="Details sur la commande (Comme le pays de provenance par example)">
-            <input type="submit" class="button-17" value="Commander" >
+            <div class="button-17 pass" id="prix_fc" name="entry.1384895702"></div>
+        </div>
+       
           
+           <input class= "details"type="text" id="UserComment" name="entry.1934637266"  placeholder="Details sur la commande (Comme le pays de provenance par example)">
+            <input type="submit" class="button-17" value="Commander" onclick="genPassword()" >
+            <div class="password">
+                <label for="entry.2066323353">Pin :</label>
+                <input type="text" name="entry.2066323353" placeholder="Create password" id="password" readonly>
+            </div>
     </div>
    </form>
  
@@ -509,19 +513,37 @@
        </div>
     
   </div>
-
+ <!-- <label for="theme">Select theme: </label>
+  <select id="theme">
+    <option value="white">White</option>
+    <option value="black">Black</option>
+  </select>-->
 <p style="padding: 1px;">©BSB</p>
    
   
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-function alert_t() {
+
+/*const select = document.getElementById("theme");
+const html = document.querySelector('html');
+document.body.style.padding = '10px';
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+select.addEventListener('change', () => select.value === 'black'
+  ? update('black', 'white')
+  : update('white', 'black')
+); */
+    function alert_t() {
   alert("Section non disponible pour le moment");
 }
     function price(){
-        var choice = document.getElementById("prix");
-        var quantite = document.getElementById("quantite").value;
+        var choice = document.getElementById("UserPrice");
+        var quantite = document.getElementById("UserQuantity").value;
         var nombre = quantite.match(/\d+/);
         var prix = choice.value;
         
@@ -587,6 +609,7 @@ function alert_t() {
     showSlides();
     
     function showSlides() {
+
       let i;
       let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot");
@@ -602,6 +625,72 @@ function alert_t() {
       dots[slideIndex-1].className += " active";
       setTimeout(showSlides, 4000); // Change image every 3 seconds
     }
-    </script>
+    function postToGoogle() {
+      var field1 = $("#Name").val();
+      var field2 = $("#Email").val();
+      var field3 = $("#Phone").val();
+      var field4 = $("#Message").val();
+        var name = $("#UserLastName").val();
+        var prenom = $("#UserName").val();
+        var email = $("#UserEmailAddress").val();
+        var PhoneNumber = $("#UserPhoneNumber").val();
+        var Product  = $("#UserProdutc").val();
+        var price = $("#UserPrice").val();
+        var quantite = $("#UserQuantity").val();
+        var PriceUs = $("#prix_f").val();
+        var PriceFc = $("#prix_fc").val();
+        var Comment = $("#UserComment").val();
+        var pin = $("#password").val();
+
+      $.ajax({
+        url: "{https://docs.google.com/forms/u/1/d/e/1FAIpQLScP25zlydGAi_1uIogG_O-ohCt2snuvYDqHdtILvmZ-XpgxLA/formResponse}",
+          
+        //add your google form generated numbers below which are also the 'names' of your inputs     
+        data: {
+        
+          "entry.2005620554": name,
+          "entry.1563551537": prenom,
+          "entry.1045781291": email,
+          "entry.1065046570": PhoneNumber,
+          "entry.1166974658": Product,
+          "entry.1375059268": price,
+          "entry.722397237": quantite,
+          "entry.1680125036": PriceUs,
+          "entry.1384895702": PriceFc,
+          "entry.1934637266": Comment,
+          "entry.2066323353":pin
+        },
+        type: "POST",
+        dataType: "xml",
+        success: function (d) {
+          $('#contact').trigger('reset');
+        },
+        error: function (x, y, z) {
+          $('#contact').trigger('reset');
+        }
+      });
+      return false;
+    }
+
+    var password=document.getElementById("password");
+
+ function genPassword() {
+    var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var passwordLength = 4;
+    var password = "";
+ for (var i = 0; i <= passwordLength; i++) {
+   var randomNumber = Math.floor(Math.random() * chars.length);
+   password += chars.substring(randomNumber, randomNumber +1);
+  }
+        document.getElementById("password").value = password;
+ }
+
+</script>
+
+
+
+<script>
+    
+  </script>
 </body>
 </html>

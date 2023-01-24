@@ -1,0 +1,11 @@
+"https://docs.google.com/forms/u/1/d/e/1FAIpQLScP25zlydGAi_1uIogG_O-ohCt2snuvYDqHdtILvmZ-XpgxLA/formResponse"
+
+nom 2005620554
+prenom 1563551537
+email 1045781291
+numero de telephone 1065046570
+produit 1166974658
+prix 1375059268
+qt 722397237
+prix us 1680125036
+prix fc 1384895702
