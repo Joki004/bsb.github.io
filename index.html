@@ -10,6 +10,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/png" href="./img/logo_title_bar.png"/>
+   
 </head>
 <body onscroll="price()">
     <!---------------------------------HEADER-------------------------------------->
@@ -324,82 +325,119 @@
    </div>
 <!------------------------------------COMMANDE-------------------->
    <h2 class="title_o">Commande</h2>
-   <form method="post" class="co"  id=”contact” onsubmit="return postToGoogle();">
+   <form  class="co"  id=”contact” onsubmit="return postToGoogle();">
     <div class="order">
         <div class="nom">
             <label for="entry.2005620554"></label>
-            <input type="text" name="entry.2005620554" class="nom_t" placeholder="Nom" id="UserLastName">
-            <label for="entry.1563551537"></label>
-            <input type="text" name="entry.1563551537" placeholder="Prenom"  class="nom_t" id="UserName" >
+            <fieldset >
+                <input  placeholder="Ton nom"
+                        type="text" 
+                        name="entry.1640730257" 
+                        data-name="LastName" 
+                        id="UserLastName" 
+                        required>
+              <!-- </fieldset>
+              <label for="entry.1563551537"></label>
+                <fieldset>
+                <input  placeholder="Ton Prenom"
+                type="text" 
+                name="entry.1563551537" 
+                data-name="Name" 
+                id="Name" 
+                required>
+             </fieldset>-->
+            
+          
         </div>
         <div class="coordonee">
-            <label for="entry.1045781291"></label>
-            <input type="text" class="nom_t" name="entry.1045781291" placeholder="E-mail adresse" id="UserEmailAddress">
-            <label for="entry.1065046570"></label>
-            <input type="text" class="nom_t" name="entry.1065046570" placeholder="Numero" id="UserPhoneNUmber">
+            <fieldset>
+                <input 
+                        placeholder="Ton adresse mail" 
+                        type="email" 
+                        name="entry.1045781291" 
+                        data-name="Email" 
+                        id="Email" 
+                        required>
+              </fieldset>
+            <fieldset>
+                <input 
+                        placeholder="Your Phone Number" 
+                        type="tel" 
+                        name="entry.1065046570" 
+                        data-name="Phone" 
+                        id="Phone" 
+                        required>
+              </fieldset>
         </div>
         <div class="order_t">
-            <label for="entry.1166974658">Choisis le procuit: </label>
-            <select name="entry.1166974658" class="produit_t" id="UserProdutc">
-                <option value="Netflix">Netflix</option>
-                <option value="Apple store">Apple store</option>
-                <option value="Fortnite Vbuck">Fortnite Vbuck</option>
-                <option value="Google play">Google play</option>
-                <option value="Spotify">Spotify</option>
-                <option value="Amazon">Amazon</option>
-                <option value="Xbox">Xbox</option>
-                <option value="PSN">PSN</option>
-                <option value="Point FIFA">Point FIFA</option>
-                <option value="Nintendo Eshop">Nintendo Eshop</option>
-                <option value="Microsoft">Microsoft</option>
-                <option value="Twitch">Twitch</option>
-                <option value="Steam">Steam</option>
-                <option value="Apex legeng coins">Apex legeng coins</option>
-                <option value="League of Legend">League of Legend</option>
-            
-                <option value="PUBG Mobile UC">PUBG Mobile UC</option>
-
-
-            </select>
+            <fieldset>
+                <label for="entry.1166974658">Choix du procuit: </label>
+                <select name="entry.1166974658" class="produit_t" id="UserProdutc" type="select">
+                  <option value=" ">Choix du produit</option>
+                  <option value="Netflix">Netflix</option>
+                  <option value="Apple store">Apple store</option>
+                  <option value="Fortnite Vbuck">Fortnite Vbuck</option>
+                  <option value="Google play">Google play</option>
+                  <option value="Spotify">Spotify</option>
+                  <option value="Amazon">Amazon</option>
+                  <option value="Xbox">Xbox</option>
+                  <option value="PSN">PSN</option>
+                  <option value="Point FIFA">Point FIFA</option>
+                  <option value="Nintendo Eshop">Nintendo Eshop</option>
+                  <option value="Microsoft">Microsoft</option>
+                  <option value="Twitch">Twitch</option>
+                  <option value="Steam">Steam</option>
+                  <option value="Apex legeng coins">Apex legeng coins</option>
+                  <option value="League of Legend">League of Legend</option>
+              
+                  <option value="PUBG Mobile UC">PUBG Mobile UC</option>
+        
+        
+              </select>
+              </fieldset>
         </div>
 
         <div class="price">
-            <label for="entry.1375059268">Choose a car:</label>
-            <select name="entry.1375059268" class="prix" onchange="price()" id="UserPrice" >
-                <option value=".">Faites votre choix</option>
-                <option value="10(">10 €</option>
-                <option value="15(">15 €</option>
-                <option value="20(">20 €</option>
-                <option value="25(">25 €</option>
-                <option value="30(">35 €</option>
-                <option value="50(">50 €</option>
-                <option value="100(">100 €</option>
-
-                <option value="10$">10 $</option>
-                <option value="15$">15 $</option>
-                <option value="20$">20 $</option>
-                <option value="25$">25 $</option>
-                <option value="30$">30 $</option>
-                <option value="50$">50 $</option>
-                <option value="100$">100 $</option>
-
-                <option value="100Z">100 ZAR</option>
-                <option value="200Z">200 ZAR</option>
-                <option value="300Z">300 ZAR</option>
-                <option value="400Z">400 ZAR</option>
-                <option value="500Z">500 ZAR</option>
-                <option value="1000Z">1000 ZAR</option>
-            </select>
+            <label for="entry.1375059268">Choix du Prix:</label>
+            <fieldset>
+                <select name="entry.1375059268" class="prix" onchange="price()" id="UserPrice" >
+                  <option value=".">Faites votre choix</option>
+                  <option value="10(">10 €</option>
+                  <option value="15(">15 €</option>
+                  <option value="20(">20 €</option>
+                  <option value="25(">25 €</option>
+                  <option value="30(">35 €</option>
+                  <option value="50(">50 €</option>
+                  <option value="100(">100 €</option>
+        
+                  <option value="10$">10 $</option>
+                  <option value="15$">15 $</option>
+                  <option value="20$">20 $</option>
+                  <option value="25$">25 $</option>
+                  <option value="30$">30 $</option>
+                  <option value="50$">50 $</option>
+                  <option value="100$">100 $</option>
+        
+                  <option value="100Z">100 ZAR</option>
+                  <option value="200Z">200 ZAR</option>
+                  <option value="300Z">300 ZAR</option>
+                  <option value="400Z">400 ZAR</option>
+                  <option value="500Z">500 ZAR</option>
+                  <option value="1000Z">1000 ZAR</option>
+              </select>
+              </fieldset>
         </div>
        
         <div class="quantite">
           
-                <label for="quantite">
-                    Quantite :
-                    <input type="number" name="entry.722397237" class="quantite_t" id="UserQuantity" 
-                        min="1" max="1000" step="1" value="0" onchange="price()">
-                    
-                </label>
+            <fieldset>
+                <label for="quantite">  Quantite :</label>
+                 
+                <input type="number" name="entry.722397237" class="quantite_t" id="UserQuantity" 
+                      min="1" max="1000" step="1" value="0"  onchange="genPassword(), price()">
+                  
+             
+              </fieldset>
 
         </div>
         <div class="facture" >
@@ -407,20 +445,37 @@
             <h4>+ frais de service </h4>
             <h5></h5>
             <label for="prix_f"></label>
-            <div class="button-17 pass" id="prix_f" name="entry.1680125036"></div>
+            <fieldset>
+                <div class="button-17 pass" 
+                id="prix_f" 
+                name="entry.1680125036">
+              </div>
+              </fieldset>
             <label for="prix_fc"></label>
-            <div class="button-17 pass" id="prix_fc" name="entry.1384895702"></div>
+            <fieldset>
+                <div class="button-17 pass" id="prix_fc" name="entry.1384895702"></div>
+              </fieldset>
         </div>
        
           
-           <input class= "details"type="text" id="UserComment" name="entry.1934637266"  placeholder="Details sur la commande (Comme le pays de provenance par example)">
-            <input type="submit" class="button-17" value="Commander" onclick="genPassword()" >
+        <fieldset>
+        <input 
+                placeholder="Type your message here...." 
+                data-name="Message" 
+                id="Message" 
+                name="entry.318066957">
+        </input>
+        <fieldset>
             <div class="password">
-                <label for="entry.2066323353">Pin :</label>
-                <input type="text" name="entry.2066323353" placeholder="Create password" id="password" readonly>
-            </div>
+              <label for="entry.2066323353">Pin :</label>
+              <input type="text" name="entry.2066323353" placeholder="Create password" id="password" readonly>
+          </div>
+          </fieldset>
+            <input type="submit" class="button-17" value="Commander" id="submit" onclick="genPassword()" >
+          
     </div>
    </form>
+ 
  
     
    <div class="more_product">
@@ -522,7 +577,7 @@
    
   
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
 
 /*const select = document.getElementById("theme");
@@ -541,18 +596,18 @@ select.addEventListener('change', () => select.value === 'black'
     function alert_t() {
   alert("Section non disponible pour le moment");
 }
+        const arr = [10,15,20,25,30,50,100];
+        const arr_rand = [100,200,300,400,500,1000];
+        const prix_euro = [13,19,24,30,36,60,118];
+        const prix_dollars = [12,15,23,29,34,56,111];
+        const prix_rand=[8,14,21,27,34,67];
+
+
     function price(){
         var choice = document.getElementById("UserPrice");
         var quantite = document.getElementById("UserQuantity").value;
         var nombre = quantite.match(/\d+/);
         var prix = choice.value;
-        
-        const arr = [10,15,20,25,30,50,100];
-        const arr_rand = [100,200,300,400,500,1000];
-
-        const prix_euro = [13,19,24,30,36,60,118];
-        const prix_dollars = [12,15,23,29,34,56,111];
-        const prix_rand=[8,14,21,27,34,67];
         var price, match, price_C, i;
         var flag = 0;
         if(prix[prix.length-1]==='(') {
@@ -626,24 +681,94 @@ select.addEventListener('change', () => select.value === 'black'
       setTimeout(showSlides, 4000); // Change image every 3 seconds
     }
     function postToGoogle() {
-      var field1 = $("#Name").val();
-      var field2 = $("#Email").val();
-      var field3 = $("#Phone").val();
-      var field4 = $("#Message").val();
+        
         var name = $("#UserLastName").val();
+       
         var prenom = $("#UserName").val();
-        var email = $("#UserEmailAddress").val();
-        var PhoneNumber = $("#UserPhoneNumber").val();
+        var email = $("#Email").val();
+        var PhoneNumber = $("#Phone").val();
         var Product  = $("#UserProdutc").val();
-        var price = $("#UserPrice").val();
+        var price = document.getElementById("UserPrice").value;
         var quantite = $("#UserQuantity").val();
-        var PriceUs = $("#prix_f").val();
-        var PriceFc = $("#prix_fc").val();
-        var Comment = $("#UserComment").val();
+        var PriceUs;
+        var PriceFc;
+        var Comment = $("#Message").val();
         var pin = $("#password").val();
 
+        console.log(name);
+        console.log(prenom);
+        console.log(email);
+        console.log(PhoneNumber);
+        console.log(Product);
+       
+        console.log(quantite);
+       
+        console.log(Comment);
+       
+        console.log(pin)
+        var price_C, match,disp;
+        if(price[price.length-1]==='(') {
+            
+            match = price.match(/\d+/);
+            
+            price_c = parseInt(match[0]) ;
+
+            for(i=0;i<arr.length;i++){
+
+                if(price_c === arr[i]){
+                    break;
+                }
+            }
+
+            price = prix_euro[i];
+            disp = price_c + " €";
+            console.log(disp);
+        }
+        else if(price[price.length-1]==='$') {
+            
+            match = price.match(/\d+/);
+            
+            price_c = parseInt(match[0]) ;
+
+            for(i=0;i<arr.length;i++){
+
+                if(price_c === arr[i]){
+                    break;
+                }
+            }
+
+            price = prix_dollars[i];
+            disp = price_c + " $";
+            console.log(disp);
+        }
+        else if(price[price.length-1]==='Z') {
+            
+            match = price.match(/\d+/);
+            price_c = parseInt(match[0]) ;
+
+            for(i=0;i<arr_rand.length;i++){
+
+                if(price_c === arr_rand[i]){
+                    break;
+                }
+            }
+
+            price = prix_rand[i];
+            disp = price_c + " ZAR";
+            console.log(disp);
+        }
+        PriceUs = price*quantite;
+        PriceFc = PriceUs*2000;
+      
+        var dispUS = PriceUs + " $";
+        console.log(PriceUs);
+
+        var dispFc  = PriceFc + " Fc";
+        console.log(dispFc);
+        
+
       $.ajax({
-        url: "{https://docs.google.com/forms/u/1/d/e/1FAIpQLScP25zlydGAi_1uIogG_O-ohCt2snuvYDqHdtILvmZ-XpgxLA/formResponse}",
+        url: "https://docs.google.com/forms/u/1/d/e/1FAIpQLScP25zlydGAi_1uIogG_O-ohCt2snuvYDqHdtILvmZ-XpgxLA/formResponse",
           
         //add your google form generated numbers below which are also the 'names' of your inputs     
         data: {
@@ -653,29 +778,32 @@ select.addEventListener('change', () => select.value === 'black'
           "entry.1045781291": email,
           "entry.1065046570": PhoneNumber,
           "entry.1166974658": Product,
-          "entry.1375059268": price,
+          "entry.1375059268": disp,
           "entry.722397237": quantite,
-          "entry.1680125036": PriceUs,
-          "entry.1384895702": PriceFc,
-          "entry.1934637266": Comment,
+          "entry.1680125036": dispUS,
+          "entry.1384895702": dispFc,
+          "entry.318066957": Comment,
           "entry.2066323353":pin
         },
         type: "POST",
         dataType: "xml",
         success: function (d) {
           $('#contact').trigger('reset');
+         
         },
         error: function (x, y, z) {
           $('#contact').trigger('reset');
+         
         }
       });
+      alert("commande reussie")
       return false;
     }
 
     var password=document.getElementById("password");
 
- function genPassword() {
-    var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    function genPassword() {
+    var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var passwordLength = 4;
     var password = "";
  for (var i = 0; i <= passwordLength; i++) {
@@ -686,11 +814,6 @@ select.addEventListener('change', () => select.value === 'black'
  }
 
 </script>
-
-
-
-<script>
-    
-  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>
